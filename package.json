@@ -8,11 +8,15 @@
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "server:dev": "nodemon server/index.js",
     "client:dev": "cd client && npm start",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": ["music", "player", "react", "node.js"],
   "author": "",
   "license": "MIT",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
